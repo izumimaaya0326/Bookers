@@ -1,0 +1,12 @@
+<% if flash[:notice] %>
+  <p style="color: green;"><%= flash[:notice] %></p>
+<% end %>
+
+<strong>Title:</strong>
+<p><%= @book.title %></p>
+<strong>Body:</strong>
+<p><%= @book.body %></p>
+
+<%= link_to "Edit", edit_book_path(@book) %>
+|
+<%= link_to "Back", books_path %>
